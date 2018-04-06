@@ -1,10 +1,13 @@
+import functools
+
+
 ###########################################################################
 # Core functions
 ############################################################################
 
 
-def gcd(x: int, y: int) -> int:
-    """Returns the greatest common divisor of the given numbers.
+def gcd(x, y):
+    r"""Returns the greatest common divisor of the given numbers.
 
     This function uses the Euclidean algorithm to compute the greatest
     common divisor of the integers `x` and `y`.
@@ -21,6 +24,7 @@ def gcd(x: int, y: int) -> int:
 
     See Also
     --------
+    ext_gcd, gcd_list
 
     Notes
     -----
@@ -54,3 +58,37 @@ def gcd(x: int, y: int) -> int:
         x, y = y, x % y
 
     return x
+
+
+def gcd_list(iterable):
+    r"""Returns the greatest common divisor of the given numbers.
+
+    Parameters
+    ----------
+    iterable : iterable of int
+
+    Returns
+    -------
+    d : int
+        The greatest common divisor of the given integers.
+
+    See Also
+    --------
+    ext_gcd, gcd
+
+    Notes
+    -----
+
+    References
+    ----------
+    .. [1] T.M. Apostol, "Introduction to Analytic Number Theory",
+    Springer-Verlag, New York, 1976.
+
+    Examples
+    --------
+    >>> gcd_list([2, 4, 6])
+    2
+    >>> gcd_list([7])
+    7
+    """
+    return functools.reduce(gcd, iterable)

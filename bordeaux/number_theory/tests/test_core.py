@@ -1,5 +1,6 @@
 from bordeaux.number_theory.core import (
-    gcd
+    gcd,
+    gcd_list
 )
 
 
@@ -54,3 +55,9 @@ def test_gcd():
             i += 1
 
 
+def test_gcd_list():
+    assert gcd_list([2, 4, 6, 8]) == 2
+    assert gcd_list([1, 4, 6, 8]) == 1
+    assert gcd_list([-2, 4, 6, 8]) == 2
+    assert gcd_list([0, 4, 6, 8]) == 2
+    assert gcd_list([2]) == 2
