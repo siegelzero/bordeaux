@@ -24,7 +24,7 @@ def gcd(x, y):
 
     See Also
     --------
-    ext_gcd, gcd_list
+    gcd_list
 
     Notes
     -----
@@ -37,7 +37,7 @@ def gcd(x, y):
     References
     ----------
     .. [1] Bach, Shallitt, "Algorithmic Number Theory", MIT Press,
-    Cambridge, MA, 1996
+       Cambridge, MA, 1996
 
     Examples
     --------
@@ -74,15 +74,16 @@ def gcd_list(iterable):
 
     See Also
     --------
-    ext_gcd, gcd
+    gcd
 
     Notes
     -----
+    See [2].
 
     References
     ----------
-    .. [1] T.M. Apostol, "Introduction to Analytic Number Theory",
-    Springer-Verlag, New York, 1976.
+    .. [2] T.M. Apostol, "Introduction to Analytic Number Theory",
+       Springer-Verlag, New York, 1976.
 
     Examples
     --------

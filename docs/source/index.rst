@@ -8,7 +8,8 @@ Welcome to bordeaux's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+
+   reference/number_theory.rst
 
 
 
